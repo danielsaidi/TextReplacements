@@ -10,7 +10,7 @@ import SwiftUI
 
 public extension Text {
     
-    /// Create a replacement view with a single replacement.
+    /// Creates a text view with a text and a single replacement.
     init(
         _ text: String,
         replace: String,
@@ -19,7 +19,7 @@ public extension Text {
         self.init(text, replacements: [replace: replacement])
     }
     
-    /// Create a replacement view with multiple replacements.
+    /// Creates a text view with a text and a multiple replacements.
     init(
         _ text: String,
         replacements: [String: (String) -> Text]
@@ -116,6 +116,10 @@ private extension Text {
         VStack {
             Color.clear.frame(height: 100)
             if #available(iOS 17, macOS 13.1, tvOS 17, watchOS 9.1, *) {
+                Text("I") +
+                Text(" **love** (❤️) ").foregroundStyle(.red) +
+                Text("SwiftUI!")
+                
                 Text(
                     "TextReplacements is a SwiftUI library that extends the Text view with ways to customize any parts of its text. The result is a Text with customized segments that can flow nicely over multiple lines.",
                     replacements: [
