@@ -1,6 +1,6 @@
 //
 //  Text+Replacements.swift
-//  TextReplacementView
+//  TextReplacements
 //
 //  Created by Daniel Saidi on 2025-04-08.
 //  Copyright © 2025 Daniel Saidi. All rights reserved.
@@ -117,43 +117,53 @@ private extension Text {
             Color.clear.frame(height: 100)
             if #available(iOS 17, macOS 13.1, tvOS 17, watchOS 9.1, *) {
                 Text(
-                    "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
+                    "TextReplacements is a SwiftUI library that extends the Text view with ways to customize any parts of its text. The result is a Text with customized segments that can flow nicely over multiple lines.",
                     replacements: [
-                        "TextReplacementView": {
+                        "TextReplacements": {
                             Text($0)
-                                .font(.title.bold())
+                                .font(.title)
+                                .fontWeight(.black)
                                 .fontDesign(.rounded)
                                 .foregroundColor(.green)
                         },
-                        "customize": {
-                            Text($0)
-                                .font(.body.bold())
-                                .foregroundColor(.purple)
-                        },
-                        "part": {
+                        "SwiftUI": {
                             Text($0)
                                 .font(.headline)
-                                .foregroundColor(.red)
-                        },
-                        "text": {
-                            Text($0)
-                                .underline()
-                                .strikethrough()
+                                .fontWeight(.black)
+                                .fontDesign(.rounded)
+                                .foregroundColor(.blue)
                         },
                         "Text": {
                             Text($0)
-                                .bold()
+                                .fontWeight(.black)
+                                .fontDesign(.rounded)
                                 .foregroundColor(.black.opacity(0.6))
                         },
-                        "flow nicely over multiple lines": {
+                        "customize": {
+                            Text($0)
+                                .italic()
+                                .underline()
+                                .font(.body)
+                                .fontWeight(.heavy)
+                                .fontDesign(.monospaced)
+                                .foregroundColor(.purple)
+                        },
+                        "par": {
+                            Text($0)
+                                .font(.headline)
+                                .fontWeight(.black)
+                                .fontDesign(.rounded)
+                                .foregroundColor(.red)
+                        },
+                        "can flow nicely over multiple lines": {
                             Text($0)
                                 .foregroundColor(.orange)
                         }
                     ]
                 )
+                .padding()
                 #if os(visionOS)
                 .frame(maxWidth: 350)
-                .padding()
                 .background(.ultraThickMaterial)
                 .background(.white.opacity(0.5))
                 .clipShape(.rect(cornerRadius: 10))

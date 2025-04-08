@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "TextReplacementView",
+    name: "TextReplacements",
     platforms: [
         .iOS(.v13),
         .macOS(.v11),
@@ -14,17 +14,17 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "TextReplacementView",
-            targets: ["TextReplacementView"]
+            name: "TextReplacements",
+            targets: ["TextReplacements"]
         )
     ],
     targets: [
         .target(
-            name: "TextReplacementView"
+            name: "TextReplacements"
         ),
         .testTarget(
-            name: "TextReplacementViewTests",
-            dependencies: ["TextReplacementView"]
+            name: "TextReplacementsTests",
+            dependencies: ["TextReplacements"]
         )
     ]
 )

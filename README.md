@@ -3,74 +3,84 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/danielsaidi/TextReplacementView?color=%2300550&sort=semver" alt="Version" title="Version" />
+    <img src="https://img.shields.io/github/v/release/danielsaidi/TextReplacements?color=%2300550&sort=semver" alt="Version" title="Version" />
     <img src="https://img.shields.io/badge/swift-6.1-orange.svg" alt="Swift 6.1" />
     <img src="https://img.shields.io/badge/platform-SwiftUI-blue.svg" alt="Swift UI" title="SwiftUI" />
-    <a href="https://danielsaidi.github.io/TextReplacementView"><img src="https://img.shields.io/badge/documentation-web-blue.svg" alt="Documentation" /></a>
-    <img src="https://img.shields.io/github/license/danielsaidi/TextReplacementView" alt="MIT License" title="MIT License" />
+    <a href="https://danielsaidi.github.io/TextReplacements"><img src="https://img.shields.io/badge/documentation-web-blue.svg" alt="Documentation" /></a>
+    <img src="https://img.shields.io/github/license/danielsaidi/TextReplacements" alt="MIT License" title="MIT License" />
 </p>
 
 
 
-# TextReplacementView
+# TextReplacements
 
-TextReplacementView is a SwiftUI view that lets you customize the rendering of any part of a string.
+TextReplacements is a SwiftUI library that extends the `Text` view with ways to customize the rendering of any parts of its text.
 
 <p align="center">
-    <img src="Resources/Preview.jpg" />
+    <img src="Resources/Preview.jpeg" />
 </p>
 
-TextReplacementView works on all major Apple platforms and is designed to be easy to use. Just provide it with a string and one or several replacements, and it will render a collection of `Text` elements.
+TextReplacements works on all major Apple platforms and is designed to be easy to use.
 
 
 
 ## Installation
 
-TextReplacementView can be installed with the Swift Package Manager:
+TextReplacements can be installed with the Swift Package Manager:
 
 ```
-https://github.com/danielsaidi/TextReplacementView.git
+https://github.com/danielsaidi/TextReplacements.git
 ```
 
 
 
 ## Usage
 
-You can create a `TextReplacementView` with a string and one or multiple text replacements.
+TextReplacements let you initialize a `Text` view with a string and one or multiple text replacements.
 
-The text view in the preview above is created like this: 
+The text view in the preview above is created like this:
 
 ```swift
-TextReplacementView(
-    "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
+Text(
+    "TextReplacements is a SwiftUI library that extends the Text view with ways to customize any parts of its text. The result is a Text with customized segments that can flow nicely over multiple lines.",
     replacements: [
-        "TextReplacementView": {
+        "TextReplacements": {
             Text($0)
-                .font(.title.bold())
+                .font(.title)
+                .fontWeight(.black)
                 .fontDesign(.rounded)
                 .foregroundColor(.green)
         },
-        "customize": {
-            Text($0)
-                .font(.body.bold())
-                .foregroundColor(.purple)
-        },
-        "part": {
+        "SwiftUI": {
             Text($0)
                 .font(.headline)
-                .foregroundColor(.red)
-        },
-        "text": {
-            Text($0)
-                .underline()
-                .strikethrough()
+                .fontWeight(.black)
+                .fontDesign(.rounded)
+                .foregroundColor(.blue)
         },
         "Text": {
             Text($0)
-                .bold()
+                .fontWeight(.black)
+                .fontDesign(.rounded)
                 .foregroundColor(.black.opacity(0.6))
         },
-        "flow nicely over multiple lines": {
+        "customize": {
+            Text($0)
+                .italic()
+                .underline()
+                .font(.body)
+                .fontWeight(.heavy)
+                .fontDesign(.monospaced)
+                .foregroundColor(.purple)
+        },
+        "par": {
+            Text($0)
+                .font(.headline)
+                .fontWeight(.black)
+                .fontDesign(.rounded)
+                .foregroundColor(.red)
+        },
+        "can flow nicely over multiple lines": {
             Text($0)
                 .foregroundColor(.orange)
         }
@@ -115,7 +125,7 @@ Feel free to reach out if you have questions or want to contribute in any way:
 
 ## License
 
-TextReplacementView is available under the MIT license. See the [LICENSE][License] file for more info.
+TextReplacements is available under the MIT license. See the [LICENSE][License] file for more info.
 
 
 
@@ -129,6 +139,6 @@ TextReplacementView is available under the MIT license. See the [LICENSE][Licens
 [Mastodon]: https://mastodon.social/@danielsaidi
 [Twitter]: https://twitter.com/danielsaidi
 
-[Documentation]: https://danielsaidi.github.io/TextReplacementView/
-[Getting-Started]: https://danielsaidi.github.io/TextReplacementView/documentation/textreplacementview/getting-started
-[License]: https://github.com/danielsaidi/TextReplacementView/blob/master/LICENSE
+[Documentation]: https://danielsaidi.github.io/TextReplacements/
+[Getting-Started]: https://danielsaidi.github.io/TextReplacements/documentation/textreplacements/getting-started
+[License]: https://github.com/danielsaidi/TextReplacements/blob/master/LICENSE
