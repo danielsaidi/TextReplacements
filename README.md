@@ -14,7 +14,7 @@
 
 # TextReplacements
 
-TextReplacements is a SwiftUI library that extends the `Text` view with ways to customize the rendering of any parts of its text.
+TextReplacements is a SwiftUI library that extends the `Text` view with ways to customize any parts of its text.
 
 <p align="center">
     <img src="Resources/Preview.jpeg" />
@@ -88,7 +88,7 @@ Text(
 )
 ```
 
-You can perform any modification to individual substrings that result in a `Text` view. This brings some limitations, like not being able to apply a background color, but lets you highlight certain parts of a text with very little effort.
+You can perform any modification that result in new `Text` views. This brings some limitations, like not being able to apply a background color, but lets you highlight certain parts of a text with very little effort.
 
 
 
