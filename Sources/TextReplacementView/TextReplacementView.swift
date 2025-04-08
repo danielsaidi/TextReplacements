@@ -122,7 +122,7 @@ private extension TextReplacementView {
 #Preview {
     ScrollView {
         Color.clear.frame(height: 100)
-        if #available(iOS 16.1, *) {
+        if #available(iOS 16.1, macOS 13.1, tvOS 16.1, watchOS 9.1, *) {
             TextReplacementView(
                 "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
                 replacements: [
@@ -158,7 +158,15 @@ private extension TextReplacementView {
                     }
                 ]
             )
+            #if os(visionOS)
+            .frame(maxWidth: 350)
             .padding()
+            .background(.ultraThickMaterial)
+            .background(.white.opacity(0.5))
+            .clipShape(.rect(cornerRadius: 10))
+            .padding()
+            .scaleEffect(2)
+            #endif
         }
     }
 }
