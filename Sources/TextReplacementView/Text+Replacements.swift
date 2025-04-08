@@ -1,5 +1,5 @@
 //
-//  TextReplacementView.swift
+//  Text+Replacements.swift
 //  TextReplacementView
 //
 //  Created by Daniel Saidi on 2025-04-08.
@@ -8,12 +8,10 @@
 
 import SwiftUI
 
-/// This view can replace one or many substrings in a string
-/// with replacement `Text` views.
-public struct TextReplacementView: View {
+public extension Text {
     
     /// Create a replacement view with a single replacement.
-    public init(
+    init(
         _ text: String,
         replace: String,
         with replacement: @escaping (String) -> Text
@@ -22,24 +20,18 @@ public struct TextReplacementView: View {
     }
     
     /// Create a replacement view with multiple replacements.
-    public init(
+    init(
         _ text: String,
         replacements: [String: (String) -> Text]
     ) {
-        self.content = Self.processReplacements(
+        self = Self.processReplacements(
             in: text,
             with: replacements
         )
     }
-    
-    private let content: Text
-    
-    public var body: some View {
-        content
-    }
 }
 
-private extension TextReplacementView {
+private extension Text {
     
     /// Process the replacements in a deterministic way
     static func processReplacements(
@@ -124,15 +116,7 @@ private extension TextReplacementView {
         VStack {
             Color.clear.frame(height: 100)
             if #available(iOS 17, macOS 13.1, tvOS 17, watchOS 9.1, *) {
-                Text("This is [Markdown](https://www.markdownguide.org) with *some* **formatting**")
-                    .foregroundStyle(.blue)
-                    .tint(.yellow)
-                    .font(.largeTitle)
-                    .padding()
-                
-                Color.clear.frame(height: 100)
-                
-                TextReplacementView(
+                Text(
                     "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
                     replacements: [
                         "TextReplacementView": {
