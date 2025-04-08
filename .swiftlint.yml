@@ -1,0 +1,13 @@
+disabled_rules:
+  - function_body_length
+  - identifier_name
+  - line_length
+  - multiple_closures_with_trailing_closure
+  - todo
+  - trailing_whitespace
+  - type_name
+  - vertical_whitespace
+
+included:
+  - Sources
+  - Tests
