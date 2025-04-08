@@ -115,7 +115,7 @@ private extension Text {
     ScrollView {
         VStack {
             Color.clear.frame(height: 100)
-            if #available(iOS 17, macOS 13.1, tvOS 17, watchOS 9.1, *) {
+            if #available(iOS 17, macOS 14, tvOS 17, watchOS 10, *) {
                 Text("I") +
                 Text(" **love** (❤️) ").foregroundStyle(.red) +
                 Text("SwiftUI!")
