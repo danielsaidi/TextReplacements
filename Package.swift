@@ -5,20 +5,26 @@ import PackageDescription
 
 let package = Package(
     name: "TextReplacementView",
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v11),
+        .tvOS(.v13),
+        .watchOS(.v7),
+        .visionOS(.v1)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "TextReplacementView",
-            targets: ["TextReplacementView"]),
+            targets: ["TextReplacementView"]
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TextReplacementView"),
+            name: "TextReplacementView"
+        ),
         .testTarget(
             name: "TextReplacementViewTests",
             dependencies: ["TextReplacementView"]
-        ),
+        )
     ]
 )
