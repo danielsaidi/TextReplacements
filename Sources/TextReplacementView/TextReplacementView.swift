@@ -121,52 +121,62 @@ private extension TextReplacementView {
 
 #Preview {
     ScrollView {
-        Color.clear.frame(height: 100)
-        if #available(iOS 16.1, macOS 13.1, tvOS 16.1, watchOS 9.1, *) {
-            TextReplacementView(
-                "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
-                replacements: [
-                    "TextReplacementView": {
-                        Text($0)
-                            .font(.title.bold())
-                            .fontDesign(.rounded)
-                            .foregroundColor(.green)
-                    },
-                    "customize": {
-                        Text($0)
-                            .font(.body.bold())
-                            .foregroundColor(.purple)
-                    },
-                    "part": {
-                        Text($0)
-                            .font(.headline)
-                            .foregroundColor(.red)
-                    },
-                    "text": {
-                        Text($0)
-                            .underline()
-                            .strikethrough()
-                    },
-                    "Text": {
-                        Text($0)
-                            .bold()
-                            .foregroundColor(.black.opacity(0.6))
-                    },
-                    "flow nicely over multiple lines": {
-                        Text($0)
-                            .foregroundColor(.orange)
-                    }
-                ]
-            )
-            #if os(visionOS)
-            .frame(maxWidth: 350)
-            .padding()
-            .background(.ultraThickMaterial)
-            .background(.white.opacity(0.5))
-            .clipShape(.rect(cornerRadius: 10))
-            .padding()
-            .scaleEffect(2)
-            #endif
+        VStack {
+            Color.clear.frame(height: 100)
+            if #available(iOS 17, macOS 13.1, tvOS 17, watchOS 9.1, *) {
+                Text("This is [Markdown](https://www.markdownguide.org) with *some* **formatting**")
+                    .foregroundStyle(.blue)
+                    .tint(.yellow)
+                    .font(.largeTitle)
+                    .padding()
+                
+                Color.clear.frame(height: 100)
+                
+                TextReplacementView(
+                    "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
+                    replacements: [
+                        "TextReplacementView": {
+                            Text($0)
+                                .font(.title.bold())
+                                .fontDesign(.rounded)
+                                .foregroundColor(.green)
+                        },
+                        "customize": {
+                            Text($0)
+                                .font(.body.bold())
+                                .foregroundColor(.purple)
+                        },
+                        "part": {
+                            Text($0)
+                                .font(.headline)
+                                .foregroundColor(.red)
+                        },
+                        "text": {
+                            Text($0)
+                                .underline()
+                                .strikethrough()
+                        },
+                        "Text": {
+                            Text($0)
+                                .bold()
+                                .foregroundColor(.black.opacity(0.6))
+                        },
+                        "flow nicely over multiple lines": {
+                            Text($0)
+                                .foregroundColor(.orange)
+                        }
+                    ]
+                )
+                #if os(visionOS)
+                .frame(maxWidth: 350)
+                .padding()
+                .background(.ultraThickMaterial)
+                .background(.white.opacity(0.5))
+                .clipShape(.rect(cornerRadius: 10))
+                .padding()
+                .scaleEffect(2)
+                #endif
+            }
         }
     }
 }
