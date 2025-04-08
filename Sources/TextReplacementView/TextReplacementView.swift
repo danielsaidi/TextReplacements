@@ -120,29 +120,45 @@ private extension TextReplacementView {
 }
 
 #Preview {
-    TextReplacementView(
-        "This view can customize any part of a text.",
-        replacements: [
-            "view": {
-                Text($0)
-                    .underline()
-                    .font(.title2.bold())
-                    .foregroundColor(.green)
-            },
-            "customize": {
-                Text($0)
-                    .font(.title3.bold())
-                    .foregroundColor(.purple)
-            },
-            "part": {
-                Text($0)
-                    .font(.footnote)
-                    .foregroundColor(.red)
-            },
-            "text": {
-                Text($0)
-                    .underline()
-            }
-        ]
-    )
+    ScrollView {
+        Color.clear.frame(height: 100)
+        if #available(iOS 16.1, *) {
+            TextReplacementView(
+                "TextReplacementView can be used to customize any part of a text and render the text as a collection of concatenated Text views that flow nicely over multiple lines.",
+                replacements: [
+                    "TextReplacementView": {
+                        Text($0)
+                            .font(.title.bold())
+                            .fontDesign(.rounded)
+                            .foregroundColor(.green)
+                    },
+                    "customize": {
+                        Text($0)
+                            .font(.body.bold())
+                            .foregroundColor(.purple)
+                    },
+                    "part": {
+                        Text($0)
+                            .font(.headline)
+                            .foregroundColor(.red)
+                    },
+                    "text": {
+                        Text($0)
+                            .underline()
+                            .strikethrough()
+                    },
+                    "Text": {
+                        Text($0)
+                            .bold()
+                            .foregroundColor(.black.opacity(0.6))
+                    },
+                    "flow nicely over multiple lines": {
+                        Text($0)
+                            .foregroundColor(.orange)
+                    }
+                ]
+            )
+            .padding()
+        }
+    }
 }
