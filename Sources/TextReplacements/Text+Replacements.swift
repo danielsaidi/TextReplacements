@@ -33,7 +33,7 @@ public extension Text {
 
 private extension Text {
     
-    /// Process the replacements in a deterministic way
+    // swiftlint: disable shorthand_operator
     static func processReplacements(
         in text: String,
         with replacements: [String: (String) -> Text]
@@ -109,6 +109,7 @@ private extension Text {
         
         return result
     }
+    // swiftlint: enable shorthand_operator
 }
 
 #Preview {
