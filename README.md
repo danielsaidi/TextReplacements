@@ -48,7 +48,7 @@ The text view in the preview above is created like this:
 
 ```swift
 Text(
-    "TextReplacements is a SwiftUI library that extends the Text view with ways to customize any parts of its text. The result is a Text with customized segments that can flow nicely over multiple lines.",
+    "TextReplacements is a SwiftUI library that can any parts of a Text.",
     replacements: [
         "TextReplacements": {
             Text($0)
@@ -68,27 +68,7 @@ Text(
             Text($0)
                 .fontWeight(.black)
                 .fontDesign(.rounded)
-                .foregroundColor(.black.opacity(0.6))
-        },
-        "customize": {
-            Text($0)
-                .italic()
-                .underline()
-                .font(.body)
-                .fontWeight(.heavy)
-                .fontDesign(.monospaced)
-                .foregroundColor(.purple)
-        },
-        "par": {
-            Text($0)
-                .font(.headline)
-                .fontWeight(.black)
-                .fontDesign(.rounded)
-                .foregroundColor(.red)
-        },
-        "can flow nicely over multiple lines": {
-            Text($0)
-                .foregroundColor(.orange)
+                .foregroundColor(.orange.opacity(0.6))
         }
     ]
 )

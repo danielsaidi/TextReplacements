@@ -10,7 +10,7 @@ import SwiftUI
 
 public extension Text {
     
-    /// Creates a text view with a text and a single replacement.
+    /// Create a text view with a single text replacement.
     init(
         _ text: String,
         replace: String,
@@ -18,8 +18,8 @@ public extension Text {
     ) {
         self.init(text, replacements: [replace: replacement])
     }
-    
-    /// Creates a text view with a text and a multiple replacements.
+
+    /// Create a text view with multiple text replacements.
     init(
         _ text: String,
         replacements: [String: (String) -> Text]
@@ -114,12 +114,7 @@ private extension Text {
 #Preview {
     ScrollView {
         VStack {
-            Color.clear.frame(height: 100)
             if #available(iOS 17, macOS 14, tvOS 17, watchOS 10, *) {
-                Text("I") +
-                Text(" **love** (❤️) ").foregroundStyle(.red) +
-                Text("SwiftUI!")
-                
                 Text(
                     "TextReplacements is a SwiftUI library that extends the Text view with ways to customize any parts of its text. The result is a Text with customized segments that can flow nicely over multiple lines.",
                     replacements: [
@@ -141,7 +136,7 @@ private extension Text {
                             Text($0)
                                 .fontWeight(.black)
                                 .fontDesign(.rounded)
-                                .foregroundColor(.black.opacity(0.6))
+                                .foregroundColor(.orange)
                         },
                         "customize": {
                             Text($0)
@@ -161,7 +156,7 @@ private extension Text {
                         },
                         "can flow nicely over multiple lines": {
                             Text($0)
-                                .foregroundColor(.orange)
+                                .foregroundColor(.pink)
                         }
                     ]
                 )
