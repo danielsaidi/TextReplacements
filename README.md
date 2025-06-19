@@ -40,15 +40,16 @@ You can [become a sponsor][Sponsors] to help me dedicate more time on my various
 
 
 
-## Usage
+## Getting Started
 
-TextReplacements let you initialize a `Text` view with a string and one or multiple text replacements.
 
-The text view in the preview above is created like this:
+### Text Replacements
+
+TextReplacements let you create a `Text` with one or multiple text replacements. For instance, the preview above was created like this:
 
 ```swift
 Text(
-    "TextReplacements is a SwiftUI library that can any parts of a Text.",
+    "TextReplacements is a SwiftUI library that extends the Text view...",
     replacements: [
         "TextReplacements": {
             Text($0)
@@ -68,13 +69,36 @@ Text(
             Text($0)
                 .fontWeight(.black)
                 .fontDesign(.rounded)
-                .foregroundColor(.orange.opacity(0.6))
+                .foregroundColor(.primary.opacity(0.6))
         }
+        ...
     ]
 )
 ```
 
-You can perform any modification that result in new `Text` views. This brings some limitations, like not being able to apply a background color, but lets you highlight certain parts of a text with very little effort.
+Since each text replacement must return a `Text` result, we can only apply view modifiers that return a `Text`. This brings some limitations, like not being able to apply a background color to individual components.
+
+
+### Text Components
+
+TextReplacements lets you initialize a `Text` view with a collection of texts and links:
+
+```swift
+Text(
+    .text("You must accept our"),
+    .link("terms & conditions", .init(string: "https://danielsaidi.com")),
+    .text("to use this app. See our"),
+    .link("website", .init(string: "https://danielsaidi.com")),
+    .text("for more information.")
+)
+.textLinkStyle(.boldItalic)
+.accentColor(.orange)
+.foregroundColor(.blue)
+.padding()
+```
+
+The resulting text is rendered as Markdown, which makes it possible to use plain view modifiers to style the view. 
+
 
 
 

@@ -4,6 +4,19 @@ TextReplacementView will use semver after 1.0.
 
 
 
+## 0.3
+
+This version makes it possible to render a `Text` with `TextComponent` values.
+
+### ✨ Features
+
+* `Text` has two new `TextComponent` initializers (functions).
+* `TextComponent` is a new enum that defines `text` and `link` values.
+* `TextComponent.LinkStyle` is a new value that can style `TextComponent.link`s.
+* `View` has a new `textLinkStyle(...)` modifier that can be used to apply a link style.
+
+
+
 ## 0.2
 
 Ok, never before has an assumption so quickly become incorrect as in this case. A few hours after the 0.1, [@kevinrpb](https://github.com/kevinrpb) suggested a change that will not only make this library a million times (ish) better, but it also calls for a project name change. 
