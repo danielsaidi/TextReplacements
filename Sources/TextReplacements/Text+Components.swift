@@ -10,11 +10,11 @@ import SwiftUI
 
 /// Create a text view that mixes plain texts and links.
 ///
-/// The view is initialized with ``TextComponent`` items,
-/// which are converted to Markdown content. You can use
-/// ``SwiftUICore/View/textLinkStyle(_:)`` to set up how
-/// links are styled, and use `.tint` to color links and
-/// `.foregroundStyle` to color the rest of the text.
+/// The view is initialized with ``TextComponent`` items, which are converted
+/// to Markdown content.
+///
+/// You can use ``SwiftUICore/View/textLinkStyle(_:)`` to style links,
+/// `.tint` to color them and `.foregroundStyle` to color text.
 @MainActor
 public func Text(_ components: [TextComponent]) -> some View {
     TextComponentView(components)
@@ -22,11 +22,11 @@ public func Text(_ components: [TextComponent]) -> some View {
 
 /// Create a text view that mixes plain texts and links.
 ///
-/// The view is initialized with ``TextComponent`` items,
-/// which are converted to Markdown content. You can use
-/// ``SwiftUICore/View/textLinkStyle(_:)`` to set up how
-/// links are styled, and use `.tint` to color links and
-/// `.foregroundStyle` to color the rest of the text.
+/// The view is initialized with ``TextComponent`` items, which are converted
+/// to Markdown content.
+///
+/// You can use ``SwiftUICore/View/textLinkStyle(_:)`` to style links,
+/// `.tint` to color them and `.foregroundStyle` to color text. 
 @MainActor
 public func Text(_ components: TextComponent...) -> some View {
     TextComponentView(components)
