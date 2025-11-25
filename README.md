@@ -8,7 +8,6 @@
     <img src="https://img.shields.io/badge/platform-SwiftUI-blue.svg" alt="Swift UI" title="SwiftUI" />
     <a href="https://danielsaidi.github.io/TextReplacements"><img src="https://img.shields.io/badge/documentation-web-blue.svg" alt="Documentation" /></a>
         <a href="https://github.com/danielsaidi/TextReplacements/blob/master/LICENSE"><img src="https://img.shields.io/github/license/danielsaidi/TextReplacements" alt="MIT License" /></a>
-    <a href="https://github.com/sponsors/danielsaidi"><img src="https://img.shields.io/badge/sponsor-GitHub-red.svg" alt="Sponsor my work" /></a>
 </p>
 
 
@@ -32,11 +31,6 @@ TextReplacements can be installed with the Swift Package Manager:
 ```
 https://github.com/danielsaidi/TextReplacements.git
 ```
-
-
-## Support My Work
-
-You can [become a sponsor][Sponsors] to help me dedicate more time on my various [open-source tools][OpenSource]. Every contribution, no matter the size, makes a real difference in keeping these tools free and actively developed.
 
 
 
@@ -111,6 +105,11 @@ This package will be documented once it gets more than 100 stars.
 ## Demo Application
 
 This package will get a demo application once it gets more than 100 stars.
+
+
+## Support My Work
+
+You can [become a sponsor][Sponsors] to help me dedicate more time on my various [open-source tools][OpenSource]. Every contribution, no matter the size, makes a real difference in keeping these tools free and actively developed.
 
 
 
