@@ -95,16 +95,16 @@ The resulting text is rendered as Markdown, which makes it possible to use plain
 
 
 
-
 ## Documentation
 
-This package will be documented once it gets more than 100 stars.
+The online [documentation][Documentation] has more information, articles, code examples, etc.
 
 
 
 ## Demo Application
 
 This package will get a demo application once it gets more than 100 stars.
+
 
 
 ## Support My Work
@@ -141,5 +141,4 @@ TextReplacements is available under the MIT license. See the [LICENSE][License] 
 [Twitter]: https://twitter.com/danielsaidi
 
 [Documentation]: https://danielsaidi.github.io/TextReplacements/
-[Getting-Started]: https://danielsaidi.github.io/TextReplacements/documentation/textreplacements/getting-started
 [License]: https://github.com/danielsaidi/TextReplacements/blob/master/LICENSE
